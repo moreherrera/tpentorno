@@ -18,7 +18,7 @@ Pasos:
 -Abrir una terminal y navegar hasta el directorio raíz de la aplicación.
 
 -Ejecutar el siguiente comando para construir la imagen Docker:
-sudo docker build -t imagen
+     sudo docker build -t imagen
 
 -Ejecuta el sigueinte comando para hacer correr el contenedor basado en la imagen. Luego, se abrirá directamente el Menú de opciones.
-sudo docker run -it -v /home/lubuntu/entorno/contenedor:/contenedor imagen
+     sudo docker run -it -v /home/lubuntu/entorno/contenedor:/contenedor imagen
