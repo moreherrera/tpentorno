@@ -21,6 +21,6 @@ Pasos:
 
 sudo docker build -t imagen
 
--Ejecuta el sigueinte comando para hacer correr el contenedor basado en la imagen. Luego, se abrirá directamente el Menú de opciones.
+-Ejecuta el siguiente comando para hacer correr el contenedor basado en la imagen. Luego, se abrirá directamente el Menú de opciones.
 
 sudo docker run -it -v /home/lubuntu/entorno/contenedor:/contenedor imagen
