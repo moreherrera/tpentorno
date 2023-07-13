@@ -1,2 +1,2 @@
 # tpentorno
-"Aqui encontrara isntrucciones sobre como ejecutar docker"
+"Aqui encontrara instrucciones sobre como ejecutar docker"
