@@ -17,4 +17,4 @@ cat nombres_a
 #crear un archivo zip. /* àra guardar cada elemento que este en fotos
 zip archivos_generados.zip fotos.txt nombres_a nombres_validos fotos/*
 
-#para cambiar el acceso fuera del contenedor: chmod +r archivos_generados
+
