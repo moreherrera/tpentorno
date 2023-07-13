@@ -17,7 +17,7 @@ while IFS="," read -r nombre _; do
 	nombres+=("$nombre")
 done < dict.csv #redireccion de entrada a dict.csv
 
-#para que decarge las fotos a una
+#para que decargue las fotos de a una
 for ((i=1; i<=cant; i++))
 do
  nombre_foto=${nombres[$RANDOM % ${#nombres[@]}]} #lee los nombres y elegie uno al azar
