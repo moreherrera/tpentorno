@@ -21,7 +21,7 @@ done < dict.csv #redireccion de entrada a dict.csv
 for ((i=1; i<=cant; i++))
 do
  nombre_foto=${nombres[$RANDOM % ${#nombres[@]}]} #lee los nombres y elegie uno al azar
- wget -O $nombre_foto https://source.unsplash.com/random/900%C3%98800/?person #descarga una foto del link y e asigna una nombre
+ wget -O $nombre_foto https://source.unsplash.com/random/900%C3%98800/?person #descarga una foto del link y le asigna un nombre
  sleep 3s
  zip fotos $nombre_foto
 done
