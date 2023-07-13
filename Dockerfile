@@ -31,25 +31,23 @@ RUN apt-get update && apt install -y git && apt-get install -y curl && apt-get i
 
 RUN apt-get update && apt install -y imagemagick 
 
-#RUN mkdir -p /home/app/
+RUN mkdir -p /home/contenedor
 
-WORKDIR /home/lubuntu/entorno/
+WORKDIR /home/contenedor/
 
-COPY generar.sh /home/lubuntnu/entorno/
+COPY generar.sh /home/contenedor/
 
-COPY descargar.sh /home/lubuntu/entorno/
+COPY descargar.sh /home/contenedor/
  
-COPY descomprimir.sh /home/lubuntu/entorno/
+COPY descomprimir.sh /home/contenedor/
  
-COPY procesar.sh /home/lubuntu/entorno/
+COPY procesar.sh /home/contenedor/
  
-COPY comprimir.sh /home/lubutnu/entorno/
+COPY comprimir.sh /home/contenedor/
  
-COPY menu.sh /home/lubuntu/entorno
-
-#RUN mkdir /home/app/salida
+COPY menu.sh /home/contenedor/
 
 ENV OUTPUT_DIR=/output
 
-CMD ["/bin/bash"]
+CMD ["/bin/bash", "/home/contenedor/menu.sh"]
 

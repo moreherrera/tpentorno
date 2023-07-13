@@ -2,7 +2,7 @@
 
 opcion=0
 
-while [[: $opcion -ne 6 :]]; do
+while [[ $opcion != 6 ]]; do
 
   echo "MENU: "
   echo "1. Generar imagenes"
@@ -11,13 +11,12 @@ while [[: $opcion -ne 6 :]]; do
   echo "4. Procesar imagenes"
   echo "5. Comprimir archivos generados y las imagenes"
   echo "6. Salir"
-  echo "ingrese "
+  echo "ingrese el numero de la opcion deaseada: "
   read opcion
- #read -p "ingrese una opcion: " opcion
   case $opcion in
     1)
       read -p "ingrese la cantidad de imagenes a generar: " cantidad
-      ./generar.sh "$cantidad"
+      bash generar.sh "$cantidad"
       ;;
     2)
       read -p "ingrese la URL de las imagenes: " url_fotos
@@ -39,6 +38,5 @@ while [[: $opcion -ne 6 :]]; do
     *)
       echo "opcion invalida"
       ;;
-  esac
-# read -p "ingrese una opcion: " opcion
+   esac
 done
