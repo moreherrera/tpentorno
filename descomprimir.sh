@@ -3,7 +3,7 @@
 archivo=fotos.zip
 
 #verifica que el archivo existe y lllos descomprime  en un archivo
-#que se llamada "fotos"
+#que se llama "fotos"
 if [ -f $archivo ]; then
   unzip $archivo -d fotos
   echo "archivo descomprimido"
