@@ -6,21 +6,23 @@ Juana Zorzolo Rubio.
 
 Morena Herrera.
 
-# Modo de uso con Docker
+# Modo de uso de Docker
 "Aqui encontrara instrucciones sobre como ejecutar docker"
 
 Pasos:
 
 -Instalar Docker en tu sistema.
 
--Clonar o descargar este repositorio en tu máquina local.
+-Abrir una terminal y navegar hasta la carpeta donde se quiere clonar este repositorio.
 
--Abrir una terminal y navegar hasta el directorio raíz de la aplicación.
+-Clonar este repositorio en tu máquina local con el siguiente comando:
+
+*git clone https://github.com/moreherrera/tpentorno*
 
 -Ejecutar el siguiente comando para construir la imagen Docker:
 
-sudo docker build -t imagen
+*sudo docker build -t imagen*
 
 -Ejecuta el siguiente comando para hacer correr el contenedor basado en la imagen. Luego, se abrirá directamente el Menú de opciones.
 
-sudo docker run -it -v /home/lubuntu/entorno/contenedor:/contenedor imagen
+*sudo docker run -it -v /home/lubuntu/entorno/contenedor:/contenedor imagen*
