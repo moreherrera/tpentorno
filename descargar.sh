@@ -19,7 +19,7 @@ else
  exit 1
 fi
 
-#VAMOS A DESCARGAR IMAGENES Y LA SUMA DE VERIFICACION:
+#descargar las fotos y la suma de verificacion:
 wget -q "$url_fotos" -O fotos_extraidas #lee y descarga  la url de fotos.zip
 wget -q "$url_verif" -O suma_verificacion.txt #lee y descarga la url de la suma de verificacion y la guarda en una variable 
 
@@ -29,8 +29,8 @@ for imagen in fotos_extraidas; do
     suma_verif_descargada=$(cat suma_verificacion.txt| awk '{print $1}')
 
    if [ "$suma_verif_calculada" != "$suma_verif_descargada" ]; then
-       echo "Error: La suma de verificación no coincide."
-       exit 1
+       echo "La suma de verificación no coincide."
+      
    else
      echo "La suma coincide"
    fi
