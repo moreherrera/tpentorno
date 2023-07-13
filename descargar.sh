@@ -24,11 +24,11 @@ wget -q "$url_fotos" -O fotos_extraidas #lee y descarga  la url de fotos.zip
 wget -q "$url_verif" -O suma_verificacion.txt #lee y descarga la url de la suma de verificacion y la guarda en una variable 
 
 #verificar las sumas de verificación de las imágenes extraídas
-for imagen in imagenes_extraidas; do
+for imagen in fotos_extraidas; do
     suma_verif_calculada=$(find ./fotos_extraidas -type f -exec sha256sum {} \; | awk '{print$1}')
     suma_verif_descargada=$(cat suma_verificacion.txt| awk '{print $1}')
 
-   if [ "$suma_verificacion_generada" != "$suma_verificacion_descargada" ]; then
+   if [ "$suma_verif_calculada" != "$suma_verif_descargada" ]; then
        echo "Error: La suma de verificación no coincide."
        exit 1
    else
