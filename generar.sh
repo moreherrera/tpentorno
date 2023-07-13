@@ -7,20 +7,21 @@ if [ $# -ne 1 ]; then
 fi
 
 cant=$1
+nombres=()
 
 #abre el link
 wget dict.csv https://raw.githubusercontent.com/adalessandro/EdP-2023-TP-Final/main/dict.csv
 
-#
+#IFS permite delimitar lo que va leyendo del archivo dict.csv. Luego lo lee y almacena en nombres
 while IFS="," read -r nombre _; do
 	nombres+=("$nombre")
-done < dict.csv
+done < dict.csv #redireccion de entrada a dict.csv
 
-#
+#para que decarge las fotos a una
 for ((i=1; i<=cant; i++))
 do
- nombre_foto=${nombres[$RANDOM % ${#nombres[@]}]}
- wget -O $nombre_foto https://source.unsplash.com/random/900%C3%98800/?person
+ nombre_foto=${nombres[$RANDOM % ${#nombres[@]}]} #lee los nombres y elegie uno al azar
+ wget -O $nombre_foto https://source.unsplash.com/random/900%C3%98800/?person #descarga una foto del link y e asigna una nombre
  sleep 3s
  zip fotos $nombre_foto
 done
