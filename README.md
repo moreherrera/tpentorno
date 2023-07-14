@@ -25,4 +25,4 @@ Pasos:
 
 -Ejecuta el siguiente comando para hacer correr el contenedor basado en la imagen. Luego, se abrirá directamente el Menú de opciones.
 
-**sudo docker run -it -v $(pwd):/home/contenedor imagen14**
+**sudo docker run -it -v $(pwd):/home/contenedor imagen**
