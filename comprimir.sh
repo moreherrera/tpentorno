@@ -1,4 +1,4 @@
-#!/bin/bash
+	#!/bin/bash
 #guarda en fotos.txt la lista de nombres de las fotos
 ls fotos > fotos.txt
 echo "lista de los nombres de las fotos: "
@@ -15,6 +15,7 @@ echo "los nombres que terminan en a son: "
 cat nombres_a
 
 #crear un archivo zip. /* àra guardar cada elemento que este en fotos
-zip archivos_generados.zip fotos.txt nombres_a nombres_validos fotos/*
-
+zip archivos_generados.zip fotos.txt nombres_a nombres_validos fotos/* imagenes_recortadas/*
+mkdir prueba
+mv archivos_generados.zip prueba
 
